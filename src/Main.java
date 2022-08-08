@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         //задача 1
-        byte clientOS = 0;
+        byte clientOS = 13;
         switch (clientOS) {
             case 1:
                 System.out.println("Установите версию приложения для Android по ссылке");
@@ -24,8 +24,10 @@ public class Main {
             System.out.println("Установите облегченную версию приложения для для iOS по ссылке");
         } else if (clientOS == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else {
+        } else if (clientOS >= 1 && clientDeviceYear < 15) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Ошибка ввода");
         }
 
         //задача 3
@@ -97,8 +99,10 @@ public class Main {
             System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + ageYongerLimit + " рублей");
         } else if (age < 23 && salary >= 50_000 && salary < 80_000) {
             System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (int) (ageYongerLimit * overSalaryLimit) + " рублей");
-        } else {
+        } else if (age < 23 && salary >= 80_000) {
             System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (int) (ageYongerLimit * overSalaryLimit2) + " рублей");
+        } else {
+            System.out.println("Неверные вводные данные");
         }
 
         // задание 7
