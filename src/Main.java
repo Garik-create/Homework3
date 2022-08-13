@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         //задача 1
-        byte clientOS = 13;
+        int clientOS = 1323;
         switch (clientOS) {
             case 1:
                 System.out.println("Установите версию приложения для Android по ссылке");
@@ -24,7 +24,7 @@ public class Main {
             System.out.println("Установите облегченную версию приложения для для iOS по ссылке");
         } else if (clientOS == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientOS >= 1 && clientDeviceYear < 15) {
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         } else {
             System.out.println("Ошибка ввода");
